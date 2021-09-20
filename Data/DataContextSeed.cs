@@ -30,19 +30,19 @@ namespace ELSAPI.Data.SeedData
 
                     await context.SaveChangesAsync();
                 }
-                // if (!context.ProductColors.Any())
-                // {
-                //     var data = File.ReadAllText(path + @"ProductColors.json");
+                if (!context.ProductColors.Any())
+                {
+                    var data = File.ReadAllText(path + @"ProductColors.json");
 
-                //     var productColors = JsonSerializer.Deserialize<List<ProductColor>>(data);
+                    var productColors = JsonSerializer.Deserialize<List<ProductColor>>(data);
 
-                //     foreach (var item in productColors)
-                //     {
-                //         context.ProductColors.Add(item);
-                //     }
+                    foreach (var item in productColors)
+                    {
+                        context.ProductColors.Add(item);
+                    }
 
-                //     await context.SaveChangesAsync();
-                // }
+                    await context.SaveChangesAsync();
+                }
                 // if (!context.ColorSizes.Any())
                 // {
                 //     var data = File.ReadAllText(path + @"ColorSizes.json");
