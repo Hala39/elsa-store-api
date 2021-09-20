@@ -16,7 +16,7 @@ namespace ELSAPI.Data.SeedData
         {
             try
             {
-                var path = @"../../ELSA/ELSAPI/wwwroot/apiAssets/";
+                var path = @"../wwwroot/apiAssets/";
                 // if (!context.Products.Any())
                 // {
                 //     var data = File.ReadAllText(path + @"Products.json");
