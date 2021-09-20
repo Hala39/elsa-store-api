@@ -43,19 +43,19 @@ namespace ELSAPI.Data.SeedData
 
                     await context.SaveChangesAsync();
                 }
-                // if (!context.ColorSizes.Any())
-                // {
-                //     var data = File.ReadAllText(path + @"ColorSizes.json");
+                if (!context.ColorSizes.Any())
+                {
+                    var data = File.ReadAllText(path + @"ColorSizes.json");
 
-                //     var colorSizes = JsonSerializer.Deserialize<List<ColorSize>>(data);
+                    var colorSizes = JsonSerializer.Deserialize<List<ColorSize>>(data);
 
-                //     foreach (var item in colorSizes)
-                //     {
-                //         context.ColorSizes.Add(item);
-                //     }
+                    foreach (var item in colorSizes)
+                    {
+                        context.ColorSizes.Add(item);
+                    }
 
-                //     await context.SaveChangesAsync();
-                // }
+                    await context.SaveChangesAsync();
+                }
                 if (!context.Districts.Any())
                 {
                     var data = File.ReadAllText(path + @"Districts.json");
