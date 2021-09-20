@@ -1,0 +1,39 @@
+[
+    {
+        "Id": 1,
+        "Name": "Akkar"
+    },
+    {
+        "Id": 2,
+        "Name": "Baalbek-Hermel"
+    },
+    {
+        "Id": 3,
+        "Name": "Beirut"
+    },
+    {
+        "Id": 4,
+        "Name": "Beqaa"
+    },
+    {
+        "Id": 5,
+        "Name": "Keserwan-Jbeil"
+    },
+    {
+        "Id": 6,
+        "Name": "Mount-Lebanon"
+    },
+    {
+        "Id": 7,
+        "Name": "Nabatie"
+    },
+    {
+        "Id": 8,
+        "Name": "North"
+    },
+    {
+        "Id": 9,
+        "Name": "South"
+    }
+
+]

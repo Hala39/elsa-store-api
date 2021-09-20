@@ -1,0 +1,55 @@
+[
+
+    {
+        "Id": 1,
+        "Name": "Black"
+    },
+    {
+        "Id": 2,
+        "Name": "White"
+    },
+    {
+        "Id": 3,
+        "Name": "Red"
+    },
+    {
+        "Id": 4,
+        "Name": "Blue"
+    },
+    {
+        "Id": 5,
+        "Name": "Green"
+    },
+    {
+        "Id": 6,
+        "Name": "Yellow"
+    },
+    {
+        "Id": 7,
+        "Name": "Purple"
+    },
+    {
+        "Id": 8,
+        "Name": "Brown"
+    },
+    {
+        "Id": 9,
+        "Name": "Grey"
+    },
+    {
+        "Id": 10,
+        "Name": "Rose"
+    },
+    {
+        "Id": 11,
+        "Name": "Orange"
+    },
+    {
+        "Id": 12,
+        "Name": "Violet"
+    },
+    {
+        "Id": 13,
+        "Name": "One Color"
+    }
+]
