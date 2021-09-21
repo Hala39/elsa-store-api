@@ -27,6 +27,7 @@ namespace ELSAPI.Repositories
         }
 
         string GetUserId() => _httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
         public async Task<List<OrderDto>> GetPendingOrders()
         {
             var orders = await _context.Orders.Where(o => o.UserId == GetUserId() && o.Confirmed == false)
@@ -37,6 +38,7 @@ namespace ELSAPI.Repositories
                     .ThenInclude(o => o.Governorate)
                 .Include(o => o.Items)
                 .AsNoTracking()
+                .OrderByDescending(o => o.OrderedAt)
                 .ToListAsync();
 
             return orders.Select(o => _mapper.Map<OrderDto>(o)).ToList();
@@ -52,6 +54,7 @@ namespace ELSAPI.Repositories
                     .ThenInclude(o => o.Governorate)
                 .Include(o => o.Items)
                 .AsNoTracking()
+                .OrderByDescending(o => o.OrderedAt)
                 .ToListAsync();
 
             return orders.Select(o => _mapper.Map<OrderDto>(o)).ToList();
@@ -112,7 +115,6 @@ namespace ELSAPI.Repositories
             }
 
             return false;
-
         }
     }
 }

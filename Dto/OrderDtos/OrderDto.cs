@@ -12,7 +12,7 @@ namespace ELSAPI.Dto
         public AddressDto Address { get; set; }
         public List<BasketItem> Items { get; set; }
         public decimal Total { get; set; }
-        public DateTime Starting { get; set; }
+        public DateTime OrderedAt { get; set; }
         public bool Confirmed { get; set; }
     }
 }

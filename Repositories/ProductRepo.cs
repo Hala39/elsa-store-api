@@ -48,7 +48,7 @@ namespace ELSAPI.Repositories
         {
             var query = _context.Products.AsQueryable();
             
-            query = query.OrderByDescending(p => p.Date);
+            query = query.OrderBy(p => p.Date);
 
             if (!String.IsNullOrEmpty(productParams.SearchString))
             {
