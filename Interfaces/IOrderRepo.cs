@@ -12,6 +12,6 @@ namespace ELSAPI.Interfaces
          Task<List<OrderDto>> GetPendingOrders();
          Task<bool> ConfirmOrder(int orderId);
          Task<bool> ClearRecentOrders();
-        
+        Task<bool> DeleteRecentOrder(int id);
     }
 }

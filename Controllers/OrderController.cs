@@ -46,6 +46,12 @@ namespace ELSAPI.Controllers
         {
             return Ok(await _repo.ClearRecentOrders());
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteRecentOrder(int id)
+        {
+            return Ok(await _repo.DeleteRecentOrder(id));
+        }
         
     }
 }

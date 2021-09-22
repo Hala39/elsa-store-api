@@ -118,5 +118,34 @@ namespace ELSAPI.Repositories
 
             return false;
         }
+
+        public async Task<bool> DeleteRecentOrder(int id)
+        {
+            var order = await _context.Orders
+            .Include(o => o.PersonalInfo)
+            .Include(o => o.Address)
+                .ThenInclude(o => o.District)
+            .Include(o => o.Address)
+                .ThenInclude(o => o.Governorate)
+            .Include(o => o.Items)
+            .FirstOrDefaultAsync(o => o.Id == id);
+
+            if (order != null) 
+            {
+                try
+                {
+                    _context.Orders.Remove(order);
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                catch (System.Exception ex)
+                {
+                    throw new Exception(ex.Message);
+                }
+            }
+            
+            return false;
+            
+        }
     }
 }

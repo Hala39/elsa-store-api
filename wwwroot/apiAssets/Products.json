@@ -1,0 +1,79 @@
+[
+    {
+        "Id": 1,
+        "Name": "Good Boys",
+        "Description": "Good Boys t-shirt cotton fabric",
+        "Price": 40,
+        "CategoryId": 5
+    },
+    {
+        "Id": 2,
+        "Name": "Winter Jacket",
+        "Description": "Warm Jacket three colors winter collection",
+        "Price": 65,
+        "CategoryId": 3
+    },
+    {
+        "Id": 3,
+        "Name": "Fair Dress",
+        "Description": "Summer Chiffon dress for girls two awesome colors",
+        "Price": 45,
+        "CategoryId": 5
+    },
+    {
+        "Id": 4,
+        "Name": "Rainbow Jacket",
+        "Description": "Rainbow Jacket warm colorful one color",
+        "Price": 50,
+        "CategoryId": 4
+    },
+    {
+        "Id": 5,
+        "Name": "Party Dress",
+        "Description": "Little dress for little princess two beautiful colors",
+        "Price": 70,
+        "CategoryId": 5
+    },
+    {
+        "Id": 6,
+        "Name": "4x4",
+        "Description": "High quality 4x4 car for teens",
+        "Price": 150,
+        "CategoryId": 1
+    },
+    {
+        "Id": 7,
+        "Name": "Girls Vehicle",
+        "Description": "Safe vehicles for baby girls with multiple pieces",
+        "Price": 90,
+        "CategoryId": 1
+    },
+    {
+        "Id": 8,
+        "Name": "Barby Lila",
+        "Description": "Cute barby Lila for baby girls high quality good fabric",
+        "Price": 35,
+        "CategoryId": 2
+    },
+    {
+        "Id": 9,
+        "Name": "Baby Walker",
+        "Description": "Baby walker with play center blue",
+        "Price": 95,
+        "CategoryId": 1
+    },
+    {
+        "Id": 10,
+        "Name": "Electric Car",
+        "Description": "Best selling electric baby car ride on",
+        "Price": 120,
+        "CategoryId": 1
+    },
+    {
+        "Id": 11,
+        "Name": "Funky Car",
+        "Description": "Colorful baby car high quality safe secure",
+        "Price": 80,
+        "CategoryId": 1
+    }
+]
