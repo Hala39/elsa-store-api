@@ -229,7 +229,8 @@ namespace ELSAPI.Migrations
                     UserId = table.Column<string>(type: "text", nullable: true),
                     Total = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
                     OrderedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
-                    Confirmed = table.Column<bool>(type: "boolean", nullable: false)
+                    Confirmed = table.Column<bool>(type: "boolean", nullable: false),
+                    ReceivedAt = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {

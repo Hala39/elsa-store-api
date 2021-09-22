@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using AutoMapper.QueryableExtensions;
 using ELSAPI.Entities.OrderAggregate;
 using ELSAPI.Entities;
+using System;
 
 namespace ELSAPI.Repositories
 {
@@ -88,6 +89,7 @@ namespace ELSAPI.Repositories
         {
             var order = await _context.Orders.FirstOrDefaultAsync(o => o.Id == orderId);
             order.Confirmed = true;
+            order.ReceivedAt = DateTime.UtcNow;
             await _context.SaveChangesAsync();
             return true;
         }

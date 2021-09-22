@@ -17,45 +17,49 @@ namespace ELSAPI.Data.SeedData
             try
             {
                 var path = @"../wwwroot/apiAssets/";
-                if (!context.Products.Any())
-                {
-                    var data = File.ReadAllText(path + @"Products.json");
 
-                    var products = JsonSerializer.Deserialize<List<Product>>(data);
+                // if (!context.Products.Any())
+                // {
+                //     var data = File.ReadAllText(path + @"Products.json");
 
-                    foreach (var item in products)
-                    {
-                        context.Products.Add(item);
-                    }
+                //     var products = JsonSerializer.Deserialize<List<Product>>(data);
 
-                    await context.SaveChangesAsync();
-                }
-                if (!context.ProductColors.Any())
-                {
-                    var data = File.ReadAllText(path + @"ProductColors.json");
+                //     foreach (var item in products)
+                //     {
+                //         context.Products.Add(item);
+                //     }
 
-                    var productColors = JsonSerializer.Deserialize<List<ProductColor>>(data);
+                //     await context.SaveChangesAsync();
+                // }
 
-                    foreach (var item in productColors)
-                    {
-                        context.ProductColors.Add(item);
-                    }
+                // if (!context.ProductColors.Any())
+                // {
+                //     var data = File.ReadAllText(path + @"ProductColors.json");
 
-                    await context.SaveChangesAsync();
-                }
-                if (!context.ColorSizes.Any())
-                {
-                    var data = File.ReadAllText(path + @"ColorSizes.json");
+                //     var productColors = JsonSerializer.Deserialize<List<ProductColor>>(data);
 
-                    var colorSizes = JsonSerializer.Deserialize<List<ColorSize>>(data);
+                //     foreach (var item in productColors)
+                //     {
+                //         context.ProductColors.Add(item);
+                //     }
 
-                    foreach (var item in colorSizes)
-                    {
-                        context.ColorSizes.Add(item);
-                    }
+                //     await context.SaveChangesAsync();
+                // }
 
-                    await context.SaveChangesAsync();
-                }
+                // if (!context.ColorSizes.Any())
+                // {
+                //     var data = File.ReadAllText(path + @"ColorSizes.json");
+
+                //     var colorSizes = JsonSerializer.Deserialize<List<ColorSize>>(data);
+
+                //     foreach (var item in colorSizes)
+                //     {
+                //         context.ColorSizes.Add(item);
+                //     }
+
+                //     await context.SaveChangesAsync();
+                // }
+
                 if (!context.Districts.Any())
                 {
                     var data = File.ReadAllText(path + @"Districts.json");

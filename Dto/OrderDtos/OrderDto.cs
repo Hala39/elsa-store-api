@@ -14,5 +14,6 @@ namespace ELSAPI.Dto
         public decimal Total { get; set; }
         public DateTime OrderedAt { get; set; }
         public bool Confirmed { get; set; }
+        public DateTime ReceivedAt { get; set; }
     }
 }

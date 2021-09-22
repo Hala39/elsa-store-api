@@ -14,5 +14,8 @@ namespace ELSAPI.Entities.OrderAggregate
         public decimal Total { get; set; }
         public DateTime OrderedAt { get; set; } = DateTime.UtcNow;
         public bool Confirmed { get; set; } = false;
+
+        public DateTime ReceivedAt { get; set; }
+         
     }
 }

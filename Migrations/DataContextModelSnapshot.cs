@@ -267,6 +267,9 @@ namespace ELSAPI.Migrations
                     b.Property<DateTime>("OrderedAt")
                         .HasColumnType("timestamp without time zone");
 
+                    b.Property<DateTime>("ReceivedAt")
+                        .HasColumnType("timestamp without time zone");
+
                     b.Property<decimal>("Total")
                         .HasColumnType("numeric(18,2)");
 

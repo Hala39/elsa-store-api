@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ELSAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210920221150_initial")]
+    [Migration("20210922010319_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -267,6 +267,9 @@ namespace ELSAPI.Migrations
                         .HasColumnType("boolean");
 
                     b.Property<DateTime>("OrderedAt")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<DateTime>("ReceivedAt")
                         .HasColumnType("timestamp without time zone");
 
                     b.Property<decimal>("Total")
