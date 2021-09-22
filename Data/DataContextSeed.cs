@@ -18,19 +18,19 @@ namespace ELSAPI.Data.SeedData
             {
                 var path = @"../wwwroot/apiAssets/";
 
-                // if (!context.Products.Any())
-                // {
-                //     var data = File.ReadAllText(path + @"Products.json");
+                if (!context.Products.Any())
+                {
+                    var data = File.ReadAllText(path + @"Products.json");
 
-                //     var products = JsonSerializer.Deserialize<List<Product>>(data);
+                    var products = JsonSerializer.Deserialize<List<Product>>(data);
 
-                //     foreach (var item in products)
-                //     {
-                //         context.Products.Add(item);
-                //     }
+                    foreach (var item in products)
+                    {
+                        context.Products.Add(item);
+                    }
 
-                //     await context.SaveChangesAsync();
-                // }
+                    await context.SaveChangesAsync();
+                }
 
                 // if (!context.ProductColors.Any())
                 // {
