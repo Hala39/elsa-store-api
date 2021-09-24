@@ -17,7 +17,7 @@ namespace ELSAPI.Controllers
             _repo = repo;
         }
 
-        [HttpPost("addToBasket")]
+        [HttpPost]
         public async Task<IActionResult> AddItemToBasket(CreateBasketItemDto item)
         {
             return Ok(await _repo.AddItemToBasket(item));
