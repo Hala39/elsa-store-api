@@ -24,19 +24,25 @@ namespace ELSAPI.Repositories
         }
 
         // tested
-        public async Task<GetProductDto> GetProductById(int id) 
+        public async Task<GetSingleProductDto> GetProductById(int id)
         {
             var product = await _context.Products
                 .Include(p => p.Category)
+                .Include(p => p.Colors)
+                    .ThenInclude(c => c.Color)
+                .Include(p => p.Colors)
+                    .ThenInclude(c => c.SizeOptions).ThenInclude(s => s.Size)
                 .FirstOrDefaultAsync(p => p.Id == id);
-            
+
             if (product == null)
             {
                 throw new Exception("Product does not exist!");
             }
 
-            return _mapper.Map<GetProductDto>(product);
+            return _mapper.Map<GetSingleProductDto>(product);
+
         }
+
 
         // tested
         public async Task<PagedList<GetProductDto>> ListProducts(ProductParams productParams)
