@@ -9,5 +9,6 @@ namespace ELSAPI.Interfaces
     {
          Task<PagedList<GetProductDto>> ListProducts(ProductParams productParams);
          Task<GetSingleProductDto> GetProductById(int id);
+         Task<ProductColors> GetColors(int productId);
     }
 }
